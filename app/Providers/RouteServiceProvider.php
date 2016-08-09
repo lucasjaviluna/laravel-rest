@@ -53,7 +53,8 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapWebRoutes(Router $router)
     {
         $router->group([
-            'namespace' => $this->namespace, 'middleware' => 'web',
+            'namespace' => $this->namespace,
+            //'middleware' => 'web', //para que no de error de verifyCsrfToken en rutas por post
         ], function ($router) {
             require app_path('Http/routes.php');
         });
