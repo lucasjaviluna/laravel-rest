@@ -11,11 +11,6 @@
 |
 */
 
-//Headers que necesito usar para los request a la API
-//X-Requested-With  XMLHttpRequest
-//Content-Type  application/json
-
-
 Route::group(['prefix' => 'api/v1'], function () {
   Route::resource('meeting', 'MeetingController', [
     'except' => ['edit', 'create']
